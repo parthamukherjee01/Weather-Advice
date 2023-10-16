@@ -85,6 +85,10 @@
       <dmn:requiredInput href="#_5CAED302-E3DD-4EC5-B758-3F75C785901A"/>
     </dmn:informationRequirement>
   </dmn:decision>
+  <dmn:inputData id="_52B1A797-344E-4125-ABFD-067500381863" name="temperature">
+    <dmn:extensionElements/>
+    <dmn:variable id="_044D205D-6395-408F-ABDF-CA973FB63534" name="temperature"/>
+  </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_08DDA8B6-3744-4B90-98E6-1C688CCD68F5" name="DRG">
       <di:extension>
@@ -152,6 +156,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="669" y="161" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_52B1A797-344E-4125-ABFD-067500381863" dmnElementRef="_52B1A797-344E-4125-ABFD-067500381863" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="250" y="422" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_D1C89628-5207-450E-AB5A-C6FA64983353-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_D1C89628-5207-450E-AB5A-C6FA64983353">
