@@ -14,6 +14,9 @@
     <dmn:informationRequirement id="_2341C10B-C7D0-4EF2-8062-89829B244730">
       <dmn:requiredDecision href="#_A6C02706-3FDA-492F-925D-AE8F4231CA68"/>
     </dmn:informationRequirement>
+    <dmn:informationRequirement id="_A462EF4F-65EF-4694-A514-A16A88FBD5C1">
+      <dmn:requiredDecision href="#_2692FAEE-20E9-42A1-A6AF-0FF0751559C5"/>
+    </dmn:informationRequirement>
     <dmn:literalExpression id="_DA48448F-E98D-4A03-81AE-7E17038A4A29">
       <dmn:text>if Name = "" then "Sorry, we don't have enough information to provide a response." else "Hello "+Name+"! "</dmn:text>
     </dmn:literalExpression>
@@ -71,6 +74,17 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_5CAED302-E3DD-4EC5-B758-3F75C785901A" name="Road-Traffic-Forecast">
+    <dmn:extensionElements/>
+    <dmn:variable id="_D9260F6C-9BB0-4E89-962A-C4860FD21B81" name="Road-Traffic-Forecast"/>
+  </dmn:inputData>
+  <dmn:decision id="_2692FAEE-20E9-42A1-A6AF-0FF0751559C5" name="Traffic-Advice">
+    <dmn:extensionElements/>
+    <dmn:variable id="_BE397892-7404-4892-A766-9110003AECD0" name="Traffic-Advice"/>
+    <dmn:informationRequirement id="_3A4CFB42-D823-4813-A924-A5F3448B789F">
+      <dmn:requiredInput href="#_5CAED302-E3DD-4EC5-B758-3F75C785901A"/>
+    </dmn:informationRequirement>
+  </dmn:decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_08DDA8B6-3744-4B90-98E6-1C688CCD68F5" name="DRG">
       <di:extension>
@@ -122,6 +136,24 @@
         <dc:Bounds x="250" y="161" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_5CAED302-E3DD-4EC5-B758-3F75C785901A" dmnElementRef="_5CAED302-E3DD-4EC5-B758-3F75C785901A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="669" y="291" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_2692FAEE-20E9-42A1-A6AF-0FF0751559C5" dmnElementRef="_2692FAEE-20E9-42A1-A6AF-0FF0751559C5" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="669" y="161" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_D1C89628-5207-450E-AB5A-C6FA64983353-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_D1C89628-5207-450E-AB5A-C6FA64983353">
         <di:waypoint x="512" y="291"/>
         <di:waypoint x="513" y="64"/>
@@ -130,9 +162,17 @@
         <di:waypoint x="300" y="186"/>
         <di:waypoint x="463" y="39"/>
       </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_A462EF4F-65EF-4694-A514-A16A88FBD5C1" dmnElementRef="_A462EF4F-65EF-4694-A514-A16A88FBD5C1">
+        <di:waypoint x="719" y="186"/>
+        <di:waypoint x="563" y="39"/>
+      </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-drg-_130A73D3-D9E3-4C7C-BB77-E8B7D0A02407-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_130A73D3-D9E3-4C7C-BB77-E8B7D0A02407">
         <di:waypoint x="300" y="291"/>
         <di:waypoint x="300" y="211"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3A4CFB42-D823-4813-A924-A5F3448B789F-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_3A4CFB42-D823-4813-A924-A5F3448B789F">
+        <di:waypoint x="719" y="291"/>
+        <di:waypoint x="719" y="211"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
